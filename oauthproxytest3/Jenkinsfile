@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy Kvms, Caches and Target servers') {
             
             steps {
-                withCredentials([usernamePassword(credentialsId: 'Dana_Apigee_Cred', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                withCredentials([usernamePassword(credentialsId: 'Apigeecreds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh '''
                 string="${env.PRE_PROXY_DEPLOYMENT_CONFIG}"
                 if [[ $string == "kvms" ]]; then
@@ -34,7 +34,7 @@ f
             expression {$PROXY_DEPLOYMENT == 'true'}
         }
             steps {
-            	withCredentials([usernamePassword(credentialsId: 'Dana_Apigee_Cred', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            	withCredentials([usernamePassword(credentialsId: 'Apigeecreds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh "mvn -P ${params.env} -Dapigee.config.dir=./target/edge -Da.username=${USERNAME} -Da.password=${PASSWORD} -Dapigee.config.options=none deploy"
             }
         }
