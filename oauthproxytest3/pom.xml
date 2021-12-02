@@ -31,9 +31,9 @@
             <properties>
                 <apigee.profile>dev01</apigee.profile>
                 <apigee.env>dev01</apigee.env>
-                <apigee.hosturl>http://10.4.21.163:8080</apigee.hosturl>
+                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>dana-nonprod</apigee.org>
+                <apigee.org>kaushalsarathe-bb81fc62-eval</apigee.org>
                 <apigee.username>${a.username}</apigee.username>
                 <apigee.password>${a.password}</apigee.password>
                 <apigee.authtype>basic</apigee.authtype>
@@ -50,20 +50,20 @@
         </profile>
         
         <profile>
-            <id>test01</id>
+            <id>test</id>
             <properties>
-                <apigee.profile>test01</apigee.profile>
-                <apigee.env>test01</apigee.env>
-                <apigee.hosturl>http://10.4.21.163:8080</apigee.hosturl>
+                <apigee.profile>test</apigee.profile>
+                <apigee.env>test</apigee.env>
+                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>dana-nonprod</apigee.org>
+                <apigee.org>kaushalsarathe-bb81fc62-eval</apigee.org>
                 <apigee.username>${a.username}</apigee.username>
                 <apigee.password>${a.password}</apigee.password>
                 <apigee.authtype>basic</apigee.authtype>
                 <apigee.options>override,validate</apigee.options>
                 <apigee.override.delay>15</apigee.override.delay>
                 <apigee.delay>3000</apigee.delay>
-                <api.productEnvs>"dev01","test01"</api.productEnvs>
+                <api.productEnvs>"dev01","test"</api.productEnvs>
                 <edge.env.targetServer.host>www.google.com</edge.env.targetServer.host>
                 <edge.env.targetServer.basePath>/</edge.env.targetServer.basePath>
                 <edge.env.kvms.env.key>/</edge.env.kvms.env.key>
@@ -73,13 +73,13 @@
         </profile>	
 
         <profile>
-            <id>prod01</id>
+            <id>prod</id>
             <properties>
-                <apigee.profile>prod01</apigee.profile>
-                <apigee.env>prod01</apigee.env>
-                <apigee.hosturl>http://10.1.108.27:8080</apigee.hosturl>
+                <apigee.profile>prod</apigee.profile>
+                <apigee.env>prod</apigee.env>
+                <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>dana-prod</apigee.org>
+                <apigee.org>kaushalsarathe-bb81fc62-eval</apigee.org>
                 <apigee.username>${a.username}</apigee.username>
                 <apigee.password>${a.password}</apigee.password>
                 <apigee.authtype>basic</apigee.authtype>
@@ -157,11 +157,9 @@
                                         <include>edge/org/**</include>
                                         <include>edge/api/**</include>
                                         <include>apiproxy/**</include>
+                                        <include>edge/env/**</include>
                                     </includes>
-                                    <excludes>
-                                        <exclude>edge/env/**</exclude>
-                                    </excludes>
-                                </resource>
+                                </resource> 
                             </resources>
                         <!--target -->
                             <outputDirectory>${target.root.dir}</outputDirectory>
