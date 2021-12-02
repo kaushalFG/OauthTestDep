@@ -86,7 +86,7 @@
                 <apigee.options>override,validate</apigee.options>
                 <apigee.override.delay>15</apigee.override.delay>
                 <apigee.delay>3000</apigee.delay>
-                <api.productEnvs>"prod01"</api.productEnvs>
+                <api.productEnvs>"prod"</api.productEnvs>
                 <edge.env.targetServer.host>www.google.com</edge.env.targetServer.host>
                 <edge.env.targetServer.basePath>/</edge.env.targetServer.basePath>
                 <edge.env.kvms.env.key>/</edge.env.kvms.env.key>
