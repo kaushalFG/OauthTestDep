@@ -1,0 +1,15 @@
+[
+    {
+        "name": "@AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID#",
+        "host": "@REPLACE.WITH.TARGETSERVER.HOST#",
+        "isEnabled": true,
+        "port": 443,
+        "sSLInfo": {
+            "ciphers": [],
+            "clientAuthEnabled": "false",
+            "enabled": "true",
+            "ignoreValidationErrors": false,
+            "protocols": []
+        }
+    }
+]

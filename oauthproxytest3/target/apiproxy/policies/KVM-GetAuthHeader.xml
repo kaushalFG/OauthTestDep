@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM-GetAuthHeader" mapIdentifier="auth-header-config">
+    <DisplayName>KVM-GetAuthHeader</DisplayName>
+    <Properties/>
+    <Get assignTo="private.username">
+        <Key>
+            <Parameter>Key</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="private.password">
+        <Key>
+            <Parameter>Secret</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

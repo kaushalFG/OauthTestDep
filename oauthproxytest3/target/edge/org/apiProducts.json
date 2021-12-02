@@ -1,0 +1,26 @@
+[
+    {
+      "name": "@AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID#-product-cicd",
+      "apiResources": [
+          "/",
+          "/**"
+      ],
+      "approvalType": "manual",
+      "attributes": [
+          {
+              "name": "description",
+              "value": "Product to test @AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID# API"
+          },
+          {
+              "name": "access",
+              "value": "private"
+          }
+      ],
+      "description": "Product to test @AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID# API",
+      "displayName": "@AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID#-product-cicd",
+      "environments": [ @REPLACE.WITH.PRODUCT.ENVIRONMENTS# ],
+      "proxies": [
+          "@AUTOMATICALLY.REPLACED.WITH.ARTIFACT.ID#"
+      ]
+  }
+  ]

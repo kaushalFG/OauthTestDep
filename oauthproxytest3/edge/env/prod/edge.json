@@ -1,0 +1,79 @@
+{
+   "version": "1.0",
+   "apiConfig": {
+   },
+   "envConfig": {
+       "dev01": {
+           "targetServers": [
+               {
+                   "name": "HelloWorld-targetServer",
+                   "host": "apigee.backend.com",
+                   "isEnabled": true,
+                   "port": 443,
+                   "sSLInfo": {
+                       "ciphers": [],
+                       "clientAuthEnabled": "false",
+                       "enabled": "true",
+                       "ignoreValidationErrors": false,
+                       "protocols": []
+                   }
+               }
+           ],
+           "caches": [
+            {
+               "description":"helloWorlds cache",
+               "distributed":true,
+               "expirySettings":{
+                 "timeoutInSec":{
+                   "value":"3600"
+                 },
+                 "valuesNull":false
+               },
+               "name":"helloWorld-cache",
+               "overflowToDisk":true,
+               "skipCacheIfElementSizeInKBExceeds":512
+             }
+           ],
+           "kvms": [
+               {
+                   "name": "hello-KVMsldkhfwosigh",
+                   "entry": [
+                       {
+                           "name": "target.basepath",
+                           "value": "/services"
+                       }
+                   ]
+               }
+           ]
+       },
+       "prod": {
+           "targetServers": [
+           {
+               "name": "HelloWorld-targetServer",
+               "host": "api.apigee.com",
+               "isEnabled": true,
+               "port": 443,
+               "sSLInfo": {
+                   "ciphers": [],
+                   "clientAuthEnabled": "false",
+                   "enabled": "true",
+                   "ignoreValidationErrors": false,
+                   "protocols": []
+               }
+           }
+       ],
+       "caches": [],
+       "kvms": [
+           {
+               "name": "HelloWorld-kvms",
+               "entry": [
+                   {
+                       "name": "target.basepath",
+                       "value": "/services"
+                   }
+               ]
+           }
+       ]
+       }
+   }
+}
